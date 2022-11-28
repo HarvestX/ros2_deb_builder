@@ -1,0 +1,32 @@
+# ros2
+workspace/src/*
+!workspace/src/.gitkeep
+workspace/build
+workspace/install
+workspace/log
+
+# pool
+repos/ros-galactic/pool/main/*
+!repos/ros-galactic/pool/main/.gitkeep
+
+# repos
+Packages
+Packages.gz
+InRelease
+Release
+
+# yaml
+ws_galactic/h6x_rosdep.yaml
+
+# script output
+*.deb
+
+# key
+*.gpg
+*.gpg.private
+
+# vscode
+.vscode
+
+# hook
+script/on-build-failed.bash

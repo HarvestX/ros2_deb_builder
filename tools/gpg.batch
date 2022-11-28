@@ -1,0 +1,9 @@
+%echo Generating a GPG key
+Key-Type: RSA
+Key-Length: 4096
+Name-Real: sample
+Name-Email: sample@sample
+Expire-Date: 0
+%no-ask-passphrase
+%no-protection
+%commit
