@@ -13,7 +13,7 @@ Run the following commands.
 
 ```sh
 $ cd docker/
-$ docker build . -t ros2-deb-builder:galactic
+$ docker build --build-arg USERNAME=$(whoami) --build-arg USER_UID=$(id -u) --build-arg USER_GID=$(id -g) . -t ros2-deb-builder:galactic
 ```
 
 ## Prepare for Building
@@ -24,7 +24,7 @@ Please create a GPG key pair and put public key in `repos/gpg` and private key i
 
 ### List of repository
 
-This build tool uses `src.repos` for pulling latest repository with vcs command. Please fill it before proceeding. If you add private repositories, please make sure you have the proper ssh key in your host machine (`~/.ssh/`). Docker container tries to mount this directory to pull private repositories.
+This build tool uses vcs to pull repositories, and the target file is `ws_galactic/src.repos`. Please fill it before proceeding. If you add private repositories, please make sure you have the proper ssh key in your host machine (`~/.ssh/`). Docker container tries to mount this directory to pull private repositories.
 
 ## Run Docker Container
 
@@ -33,8 +33,8 @@ Run the following commands.
 ```sh
 $ cd {path_to_ros2_deb_builder}
 $ docker run -it \
-  -v ~/.ssh:/home/deb-pkg-builder/.ssh \
-  -v ./:/home/deb-pkg-builder/ros2_deb_builder ros2-deb-builder:galactic
+  -v ~/.ssh:~/.ssh \
+  -v `pwd`:~/ros2_deb_builder ros2-deb-builder:galactic
 ```
 
 ### Run apt Repository

@@ -14,7 +14,7 @@ trap "on_error" ERR
 echo "run-all.bash: START"
 
 source /opt/ros/galactic/setup.bash
-source $SCRIPT_DIR/clean-deb.bash
+#source $SCRIPT_DIR/clean-deb.bash
 source $SCRIPT_DIR/pull-repos.bash
 source $SCRIPT_DIR/update-rosdep.bash
 source $SCRIPT_DIR/generate-deb.bash
