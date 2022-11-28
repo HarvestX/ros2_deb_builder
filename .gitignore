@@ -1,9 +1,9 @@
 # ros2
-workspace/src/*
-!workspace/src/.gitkeep
-workspace/build
-workspace/install
-workspace/log
+ws_galactic/src/*
+!ws_galactic/src/.gitkeep
+ws_galactic/build
+ws_galactic/install
+ws_galactic/log
 
 # pool
 repos/ros-galactic/pool/main/*
