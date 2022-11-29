@@ -1,0 +1,4 @@
+h6x_internship_gazebo:
+  ubuntu: [ros-galactic-h6x-internship-gazebo]
+sample_rviz_plugins:
+  ubuntu: [ros-galactic-sample-rviz-plugins]
