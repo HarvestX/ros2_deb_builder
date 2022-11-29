@@ -15,9 +15,6 @@ Packages.gz
 InRelease
 Release
 
-# yaml
-ws_galactic/h6x_rosdep.yaml
-
 # script output
 *.deb
 
