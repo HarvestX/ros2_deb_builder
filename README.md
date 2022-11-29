@@ -33,8 +33,8 @@ Run the following commands.
 ```sh
 $ cd {path_to_ros2_deb_builder}
 $ docker run -it \
-  -v ~/.ssh:~/.ssh \
-  -v `pwd`:~/ros2_deb_builder ros2-deb-builder:galactic
+  -v /home/$(whoami)/.ssh:/home/$(whoami)/.ssh \
+  -v `pwd`:/home/$(whoami)/ros2_deb_builder ros2-deb-builder:galactic
 ```
 
 ### Run apt Repository
