@@ -1,5 +1,5 @@
 repositories:
   h6x-Internship:
     type: git
-    usl: git@github.com:HarvestX/h6x-Internship.git
+    url: git@github.com:HarvestX/h6x-Internship.git
     version: main
