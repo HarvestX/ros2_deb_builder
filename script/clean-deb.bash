@@ -15,8 +15,13 @@ for ITEM in $PKG_PATH; do
   DEB_NAME=$(echo $PKG_NAME | sed -e 's/_/-/g' | sed -e 's/\(.*\)/\L\1/' | sed -e 's/^/ros-galactic-/g')
 
   pushd $PKG_PATH
+
+  #delete directories created by bloom
   if [ -d debian/ ]; then
     rm -rf ./debian/
+  fi
+  if [ -d .obj-*/ ]; then
+    rm -rf ./.obj-*/
   fi
 
   if [ -f ../$DEB_NAME*.deb ]; then
@@ -25,9 +30,12 @@ for ITEM in $PKG_PATH; do
   if [ -f ../$DEB_NAME*.ddeb ]; then
     rm ../$DEB_NAME*.ddeb
   fi
+
+  # uncomment this if you keep using the same environment multiple times
   # if dpkg -s $DEB_NAME; then
   #   sudo apt remove -y $DEB_NAME
   # fi
+
   popd
 done
 
