@@ -10,7 +10,7 @@ To solve this problem, this `ros2_deb_builder` makes a correspondence table of r
 
 ### Order of building packages
 
-However, just importing the correspondence table cannot solve the problem yet. **Debian packages have to be installed before referencing them**. But most of the time your private package would reference your another private package, so you have to **build, generate deb file, and install it in order from the lowest dependency.** If the buid and install are done in the correct order, `bloom-generate` can always resolve rosdep keys.
+However, just importing the correspondence table cannot solve the problem yet. **Debian packages have to be installed before referencing them**. But most of the time your private package would reference your another private package, so you have to **build, generate deb file, and install it in order from the lowest dependency.** If the buid and install are done from the lowest dependency, `bloom-generate` can resolve rosdep keys because the dependencies (as debian packages) are always installed before referencing them.
 
 But how can we know the order of dependencies? This sounds a bit complicated, but fortunately, `colcon` command can solve this problem.
 
