@@ -9,7 +9,7 @@ $ sudo apt-get update
 $ sudo apt-get install curl gnupg
 ```
 
-2. Add h6x_apt_repos' GPG key
+2. Import the public key from the apt repository
 
 ```sh
 $ sudo mkdir -p /etc/apt/keyrings
