@@ -50,6 +50,10 @@ $ docker run -d --rm -v ./repos:/usr/share/nginx/html:ro -p 80:80 nginx
 
 You can now use <http://localhost/> as the apt repository. If it is the first time for your machine to access, [follow this instruction](./doc/apt-repo-setup.md) to setup the apt repository.
 
+## FAQ
+
+Frequently asked questions are [here](./doc/faq.md).
+
 ## References
 
 - [Creating and hosting your own deb packages and apt repo](https://earthly.dev/blog/creating-and-hosting-your-own-deb-packages-and-apt-repo/)
