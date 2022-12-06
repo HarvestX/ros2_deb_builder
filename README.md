@@ -43,7 +43,7 @@ Since the previous steps have already created apt repository, all you need to do
 
 ```sh
 $ cd {path_to_ros2_deb_builder}
-$ docker run -d --rm -v ./repos:/usr/share/nginx/html:ro -p 80:80 nginx
+$ docker run -d --rm -v `pwd`/repos:/usr/share/nginx/html:ro -p 80:80 nginx
 ```
 
 ## Access apt repository
