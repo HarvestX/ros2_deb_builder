@@ -27,3 +27,7 @@ Release
 
 # hook
 script/on-build-failed.bash
+
+# rosdep
+repos/rosdep/*
+!repos/rosdep/.gitkeep
