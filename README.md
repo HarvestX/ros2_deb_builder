@@ -12,8 +12,8 @@ Build debian package from ROS2 package, and create apt repository for distributi
 Run the following commands.
 
 ```sh
-$ cd docker/
-$ docker build --build-arg USERNAME=$(whoami) --build-arg USER_UID=$(id -u) --build-arg USER_GID=$(id -g) . -t ros2-deb-builder:galactic
+cd docker/
+docker build --build-arg USERNAME=$(whoami) --build-arg USER_UID=$(id -u) --build-arg USER_GID=$(id -g) . -t ros2-deb-builder:galactic
 ```
 
 ## Prepare for Building
@@ -31,8 +31,8 @@ This build tool uses vcs to pull repositories, and the target file is `ws_galact
 Run the following commands.
 
 ```sh
-$ cd {path_to_ros2_deb_builder}
-$ docker run -it \
+cd {path_to_ros2_deb_builder}
+docker run -it \
   -v /home/$(whoami)/.ssh:/home/$(whoami)/.ssh \
   -v `pwd`:/home/$(whoami)/ros2_deb_builder ros2-deb-builder:galactic
 ```
@@ -42,8 +42,8 @@ $ docker run -it \
 Since the previous steps have already created apt repository, all you need to do is just run http server. One of the simple ways is to use nginx docker container.
 
 ```sh
-$ cd {path_to_ros2_deb_builder}
-$ docker run -d --rm -v `pwd`/repos:/usr/share/nginx/html:ro -p 80:80 nginx
+cd {path_to_ros2_deb_builder}
+docker run -d --rm -v `pwd`/repos:/usr/share/nginx/html:ro -p 80:80 nginx
 ```
 
 ## Access apt repository

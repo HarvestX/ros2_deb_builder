@@ -7,15 +7,15 @@ Following instructions add your localhost apt repository to your hostmachine. IP
 1. Update the `apt` package index and install packages.
 
 ```sh
-$ sudo apt-get update
-$ sudo apt-get install curl gnupg
+sudo apt-get update
+sudo apt-get install curl gnupg
 ```
 
 2. Import the public key from the apt repository
 
 ```sh
-$ sudo mkdir -p /etc/apt/keyrings
-$ curl -fsSL http://localhost/gpg/sample.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/sample.gpg
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL http://localhost/gpg/sample.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/sample.gpg
 ```
 
 3. Use the following command to set up the repository (currently only `amd64` of Ubuntu 20.04 is supported)
@@ -29,13 +29,13 @@ echo \
 4. Update the `apt` package index
 
 ```sh
-$ sudo apt-get update
+sudo apt-get update
 ```
 
 If you don't receive any errors, you can now install any packages from apt repository.
 
 ```sh
-$ sudo apt-get install ros-galactic-h6x-internship-gazebo
+sudo apt-get install ros-galactic-h6x-internship-gazebo
 ```
 
 ## Add rosdep source
@@ -44,6 +44,7 @@ The following command adds rosdep source so that rosdep can resolve rosdep keys 
 
 ```sh
 echo "yaml http://localhost/rosdep/my_rosdep.yaml" | sudo tee /etc/ros/rosdep/sources.list.d/50-my-packages.list
+rosdep update
 ```
 
 
