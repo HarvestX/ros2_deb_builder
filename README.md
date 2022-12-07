@@ -48,7 +48,7 @@ docker run -d --rm -v `pwd`/repos:/usr/share/nginx/html:ro -p 80:80 nginx
 
 ## Access apt Server
 
-You can now use <http://localhost/> as the apt server. If it is the first time for your machine to access, [follow this instruction](./doc/apt-repo-setup.md) to setup the apt server.
+You can now use <http://localhost/> as the apt server. If it is the first time for your machine to access, [follow this instruction](./doc/apt-repo-setup.md) to access the apt server.
 
 ## FAQ
 
