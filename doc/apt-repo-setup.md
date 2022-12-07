@@ -1,5 +1,7 @@
 # How to setup apt repository
 
+## Add apt source
+
 Following instructions add your localhost apt repository to your hostmachine. IP address or the name of gpg key might be different from yours, so please fix them if necessary.
 
 1. Update the `apt` package index and install packages.
@@ -35,3 +37,13 @@ If you don't receive any errors, you can now install any packages from apt repos
 ```sh
 $ sudo apt-get install ros-galactic-h6x-internship-gazebo
 ```
+
+## Add rosdep source
+
+The following command adds rosdep source so that rosdep can resolve rosdep keys of this repository's packages.
+
+```sh
+echo "yaml http://localhost/rosdep/my_rosdep.yaml" | sudo tee /etc/ros/rosdep/sources.list.d/50-my-packages.list
+```
+
+
