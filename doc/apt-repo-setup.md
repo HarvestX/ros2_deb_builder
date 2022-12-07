@@ -43,7 +43,8 @@ sudo apt-get install ros-galactic-h6x-internship-gazebo
 The following command adds rosdep source so that rosdep can resolve rosdep keys of this repository's packages.
 
 ```sh
-echo "yaml http://localhost/rosdep/my_rosdep.yaml" | sudo tee /etc/ros/rosdep/sources.list.d/50-my-packages.list
+echo "yaml http://localhost/rosdep/my_rosdep.yaml" \
+  | sudo tee /etc/ros/rosdep/sources.list.d/50-my-packages.list > /dev/null
 rosdep update
 ```
 
