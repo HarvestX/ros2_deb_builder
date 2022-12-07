@@ -1,4 +1,4 @@
-# How to setup apt repository
+# How to access the apt repository
 
 ## Add apt source
 
@@ -47,5 +47,3 @@ echo "yaml http://localhost/rosdep/my_rosdep.yaml" \
   | sudo tee /etc/ros/rosdep/sources.list.d/50-my-packages.list > /dev/null
 rosdep update
 ```
-
-
