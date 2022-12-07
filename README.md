@@ -1,6 +1,6 @@
 # ROS2 Debian Package Builder
 
-Build debian package from ROS2 package, and create apt server for distribution.
+Build debian package from ROS2 package, and create apt repository for distribution.
 
 ## Environment
 
@@ -20,7 +20,7 @@ docker build --build-arg USERNAME=$(whoami) --build-arg USER_UID=$(id -u) --buil
 
 ### GPG Keys
 
-Please create a GPG key pair and put public key in `repos/gpg` and private key in `script/key`. Sample tool is stored in [here](./tools/create-gpg-key.bash). This process is required to create apt server.
+Please create a GPG key pair and put public key in `repos/gpg` and private key in `script/key`. Sample tool is stored in [here](./tools/create-gpg-key.bash). This process is required to create apt repository.
 
 ### The List of repositories to build
 
