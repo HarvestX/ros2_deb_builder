@@ -45,5 +45,5 @@ The following command adds rosdep source so that rosdep can resolve rosdep keys 
 ```sh
 echo "yaml http://localhost/rosdep/my_rosdep.yaml" \
   | sudo tee /etc/ros/rosdep/sources.list.d/50-my-packages.list > /dev/null
-rosdep update
+rosdep update --rosdistro galactic
 ```

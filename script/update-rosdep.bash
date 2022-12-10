@@ -16,7 +16,7 @@ for NAME in $PKG_NAME_LIST; do
 done
 
 echo "yaml file://$(pwd)/my_rosdep.yaml" | sudo tee /etc/ros/rosdep/sources.list.d/50-my-packages.list
-rosdep update
+rosdep update --rosdistro galactic
 sudo apt-get update
 rosdep install -y -i --from-path ./src
 
