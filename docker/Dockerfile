@@ -34,7 +34,7 @@ WORKDIR /home/$USERNAME
 # setup ros galactic
 RUN . /opt/ros/galactic/setup.sh \
  && sudo rosdep init \
- && rosdep update
+ && rosdep update --rosdistro galactic
 
 # set env
 ENV WS_GALACTIC /home/$USERNAME/ros2_deb_builder/ws_galactic
